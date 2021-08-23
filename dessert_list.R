@@ -1,3 +1,6 @@
+library(tidyverse)
+
+
 dessert_list <- tibble::tribble(
   ~rank,                  ~dessert,
      1L,  "Chocolate chip cookies",
@@ -44,10 +47,28 @@ dessert_list <- tibble::tribble(
     42L,            "Whoopie pies"
   )
 
-dessert_iconic <- function(dessert) {
-  for ()
+
+
+
+dessert_iconic <- function(dessert_choice) {
+  
+  iconic_vec <- dessert_list$dessert %>% tolower()
+  
+  if (dessert_choice %in% iconic_vec) {
+    print("your dessert is iconic")
+    
+  } else {
+    
+    print("sorry your dessert is not iconic")
+    
+  }
+  
   
 }
+
+
+
+
 
 
 
